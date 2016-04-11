@@ -1,0 +1,72 @@
+##### ¿Que es un data frame en R?
+help("data.frame")
+##¿Para que es la c?
+nombres<-c("Rodolfo Angel","Alejandro Arevalo")
+prepa<-c("Prepa 5","prepa 4")
+
+####Importar base de datos
+require(foreign)
+baseinegi$R_DEF1<-as.numeric(as.character(baseinegi$R_DEF))
+#### Estudiar subset, y operadores logicos
+### ¿Por que pide que cambie una variable a numerico?-> Para el subset
+#### Para que sirve el attach y dettach =D
+#### subset seleccionador de casos de una base de datos 
+### attach sirve para trabajar con una base de datos, sin necesidad de ocupar el simbolo
+### de pesos
+#### histogramas, plot, pie, ylim,  xlim=c(0,200000), border=true, pch grosor de linea
+########Ponderar casos
+####paqueteria que se usa es questionr
+### require(questionr)
+### Se ponderan casos para conocer el valor estimado de la poblacion
+##c1<-wtd.table(sdemt215$SEX,weights=sdemt215$FAC)
+
+###PONDERAR CASOS Y SACAR PORCENTAJES
+####cruce de tablas
+#tabrama<-wtd.table(sdemt215$sex,sedemt215$EDA,weights=sdemt215$FAC)
+#C1.1<-round((tabrama/margin.table(tabrama))*100,2)
+## Margin,table es para sacar porcentajes, el 2 es para el numero de decimales
+###
+
+###3 Exportar con .cs, lo que lo hagan en un libro y en diferentes hojas puntos extras
+#####ETIQUETAR
+#sdemt215<-ordered(sdemt215$SEX,levels=c(1,2),labels=c("Hombre","Mujer"))
+
+######RECODIFICAR 2 METODOS###
+#pONERLE OTRO VALOR A TUS DATOS
+#SDEMT215$CLASE2.1[as.numeric(sdemt215$CLASE2)>=0 & as.numeric(SDEMT215$CLASE2)<=0]<-1
+#SDEMT215$CLASE2.1[as.numeric(sdemt215$CLASE2)>=3 & as.numeric(SDEMT215$CLASE2)<=4]<-2
+
+############SERIES DE TIEMPO
+#desoc<-sample(3:8,44,replace=T)
+#tdesoc<-ts(desoc,frequency=4,start=2005)
+
+
+####SERIE DE TIEMPO MULTIPLE
+#prof1<-ts(todo[,1],frequency = 12,start = 2010)
+#desocupa1<-ts(todo[,4],frequency=12,start=2010)
+
+#seriemult<-ts.intersect(prof1,cpib1,ocupa1,desocupa1)
+#### DESCRIBE 3 ARGUMENTOS DE LA FUNCION TS.INTERSECT
+
+### ejercicio determinar en tal serie de tiempo en donde hay estacionalidad, separarla y sacar el coeficiente de 
+### de correlacion
+################# Separar ST#########################################
+#serie<-window(seriemultiple,start=c(2005,1), end=c(2009,4))
+
+################# Descomposicion de ST ################################
+tdesoc.de<-decompose(tdesoc)
+
+#names(tdesoc.de)
+#Trend<-tdesoc.de$Trend
+#season<-tdesco.de$seasonal
+
+
+#####DEtectar tendencia estacionalidad y ciclo cib graficas####
+####Funcion de autocorrelacion
+####Paqueteria fpp
+##require(fpp)
+###require(forecast)
+#correlograma si se sale de los rangos es que hay estacionalidad
+## Si no se sale podemos pasar al pronostico
+####HASTA AQUI VENDRIA EL EXAMEN
+
